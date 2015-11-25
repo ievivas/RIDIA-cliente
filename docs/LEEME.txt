@@ -1,0 +1,17 @@
+El programa usa las bibliotecas cfitsio y ccfits (Se pueden bajar con yum)
+
+En el archivo clienteqt_fits.cpp:
+· En la línea 7: Cambiar el número de puerto y poner el mismo puerto del MODIA.
+· En la línea 66 cambiar la ruta absoluta del archivo Fits que se utiliza para la simulación.
+· En la línea 25 se puede cambiar el parámetro a usleep para simular una lectura más rápida o lenta de los CCDs.
+
+Para compilar se debe agregar al .pro las siguientes lineas:
+
+QT += network
+LIBS += -L. \
+        
+      -lcfitsio \
+        
+      -lm \
+        
+      -lnsl \
